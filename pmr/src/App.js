@@ -1,4 +1,4 @@
-import './App.css';
+import './Styles/App.css';
 import Nav from  './components/Nav'
 import Hero from  './components/Hero'
 import Banner from './components/Banner'
