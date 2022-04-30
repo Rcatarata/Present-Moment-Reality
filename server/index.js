@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const EntryModel = require('./models/Entries');
+const UserModel = require('./models/Users');
 
 const cors = require('cors');
 
@@ -21,6 +22,16 @@ app.get('/getEntry', (req, res)=> {
 });
 
 
+app.get('/getUser', (req, res)=> {
+    UserModel.find({}, (err, result) => {
+        if (err) {
+            res.json(err);
+        } else {
+            res.json(result);
+        }
+    });
+});
+
 app.post('/createEntry', async (req, res) =>{
     const entry = req.body
     const newEntry = new EntryModel(entry);
@@ -29,7 +40,17 @@ app.post('/createEntry', async (req, res) =>{
     res.json(entry)
 })
 
+app.post('/createUser', async (req, res) =>{
+    const user = req.body
+    const newUser = new UserModel(user);
+    await newUser.save();
+    
+    res.json(user)
+})
+
+
 
 app.listen(3001, ()=> {
     console.log('server running on port 3001');
 });
+

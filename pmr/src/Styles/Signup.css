@@ -1,0 +1,34 @@
+.container {
+    background-image: url(../signupbg.jpeg);
+    height: 100vh;
+    width: 100vw;
+    background-position: center;
+    background-size: cover;
+}
+
+.background--filter{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(159, 234, 127, 0.336);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup--form--container{
+    height: 400px;
+    width: 600px;
+    backdrop-filter: blur(3px);
+    background-color: #f2f0f14f;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+label{
+    margin: 30px;
+
+}
