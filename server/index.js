@@ -1,3 +1,10 @@
+if (process.env.NODE_ENV !== 'production') {
+    require('dotenv').config();
+}
+
+
+
+
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
@@ -9,7 +16,7 @@ const cors = require('cors');
 app.use(express.json());
 app.use(cors());
 
-mongoose.connect('mongodb+srv://Rug:Catmon135@pmr.vhphp.mongodb.net/PMR?retryWrites=true&w=majority');
+mongoose.connect(`mongodb+srv://Rug:${process.env.mongokey}@pmr.vhphp.mongodb.net/PMR?retryWrites=true&w=majority`);
 
 app.get('/getEntry', (req, res)=> {
     EntryModel.find({}, (err, result) => {

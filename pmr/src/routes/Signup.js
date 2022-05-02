@@ -32,6 +32,7 @@ export default function Signup(){
                     <form action="/">  
                         <label htmlFor="firstName">First Name</label>
                         <input type="text" id='firstName' name='firstName' onChange={(event)=> {setFirstName(event.target.value)}}/>
+                        <br />
                         <label htmlFor="lastName">Last Name</label>
                         <input type="text" id='lastName' onChange={(event)=> {setlastName(event.target.value)}}/>
                         <br />
@@ -40,8 +41,10 @@ export default function Signup(){
                         <br />
                         <label htmlFor="password1">Password</label>
                         <input type="password" id="password1" onChange={(event)=> {setPassword1(event.target.value)}}/>
+                        <br />
                         <label htmlFor="password2">Password</label>
                         <input type="password" id="password2" onChange={(event)=> {setPassword2(event.target.value)}}/> 
+                        <br />
                         <button onClick={createUser}>Submit</button>           
                     </form>
                 </div>

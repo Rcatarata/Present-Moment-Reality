@@ -21,10 +21,8 @@
     width: 600px;
     backdrop-filter: blur(3px);
     background-color: #f2f0f14f;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
     border-radius: 20px;
 }
 
