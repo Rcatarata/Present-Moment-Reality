@@ -29,23 +29,24 @@ export default function Signup(){
         <div className="container">
             <div className="background--filter">
                 <div className='signup--form--container'>
-                    <form action="/">  
+                    <h1>Register</h1>
+                    <form className='form--maker'action="/">  
                         <label htmlFor="firstName">First Name</label>
                         <input type="text" id='firstName' name='firstName' onChange={(event)=> {setFirstName(event.target.value)}}/>
-                        <br />
+                        
                         <label htmlFor="lastName">Last Name</label>
                         <input type="text" id='lastName' onChange={(event)=> {setlastName(event.target.value)}}/>
-                        <br />
+                    
                         <label htmlFor="email">E-mail</label>
                         <input type="email" id='email' onChange={(event)=> {setEmail(event.target.value)}}/>
-                        <br />
+                        
                         <label htmlFor="password1">Password</label>
                         <input type="password" id="password1" onChange={(event)=> {setPassword1(event.target.value)}}/>
-                        <br />
+                        
                         <label htmlFor="password2">Password</label>
                         <input type="password" id="password2" onChange={(event)=> {setPassword2(event.target.value)}}/> 
-                        <br />
-                        <button onClick={createUser}>Submit</button>           
+                        
+                        <button onClick={createUser} className='submitter'>Submit</button>           
                     </form>
                 </div>
                 <Link to='/'><button>home</button></Link>

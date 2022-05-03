@@ -19,14 +19,54 @@
 .signup--form--container{
     height: 400px;
     width: 600px;
+    border-radius: 20px;
     backdrop-filter: blur(3px);
     background-color: #f2f0f14f;
-    display: grid;
-    grid-template-columns: 1fr;
-    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-label{
-    margin: 30px;
+.signup--form--container h1{
+    color: var(--color5);
+}
 
+.form--maker{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 80%
+}
+
+input{
+    border-radius: 8px;
+    height: 20px;
+    align-self: center;
+    border: .3px solid black;
+    text-indent: 8px;
+
+}
+
+label, input{
+    margin: 5px;
+    color: var(--color5);
+}
+
+.submitter{
+    grid-column: 1/3;
+    align-self: center;
+    justify-self: center;
+    height: 30px;
+    width: 100px;
+    margin: 20px 10px;
+    border: none;
+    border-radius: 15px;
+    background-color: var(--color3);
+    color: var(--color5);
+    font-weight: bold;
+}
+
+.submitter:hover{
+        cursor: pointer;
+        transform: scale(1.1);
 }
