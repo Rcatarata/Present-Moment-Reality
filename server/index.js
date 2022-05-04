@@ -7,10 +7,12 @@ const app = express();
 const mongoose = require('mongoose');
 const EntryModel = require('./models/Entries');
 const UserModel = require('./models/Users');
+const session = require('express-session');
 
 const cors = require('cors');
 
 app.use(express.json());
+app.use(session({secret: 'secrettron'}))
 app.use(cors());
 
 mongoose.connect(`mongodb+srv://Rug:${process.env.mongokey}@pmr.vhphp.mongodb.net/PMR?retryWrites=true&w=majority`);

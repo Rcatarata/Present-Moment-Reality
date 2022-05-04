@@ -8,6 +8,7 @@ import Axios from 'axios'
 
 function App() {
   const [listOfEntries, setEntries] = useState([]);
+  const [loggedIn, setLoggedIn] = useState(true)
 
 
   useEffect(()=>{
@@ -15,13 +16,13 @@ function App() {
       setEntries(response.data)
     })
   }, []);
-
+  
   return (
     <div className="App">
       <Nav />
       <Banner />
-      <Hero />
-      <div>
+      {loggedIn && <Hero />}
+      {loggedIn && <div>
         {listOfEntries.map((user) =>{
           return (
             <Comments 
@@ -31,9 +32,10 @@ function App() {
             />
           )
         })}
-      </div>
+      </div>}
     </div>
   );
 }
 
 export default App;
+

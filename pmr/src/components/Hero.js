@@ -3,7 +3,6 @@ import Axios from 'axios'
 
 export default function Hero() {
     let today = new Date();
-    console.log(today.getDate());
     const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
     let name = month[today.getMonth()];
     let todaysDate = `${name} ${today.getDate()}, ${today.getFullYear()}`
